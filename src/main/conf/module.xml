@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module author="" binaryversion="4.1.00"
+    class="org.modelio.module.utp.impl.UTPModule" id="${project.name}"
+    image="" schema-level="2" uid="607b0d93-e272-11df-b1e4-0027103ea5f4"
+    url="" version="${project.version}">
+    <ClassPath>
+        <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+    </ClassPath>
+    <Profiles>
+        <Profile id="UTPProfile" uid="51471f07-cee5-4db6-85bf-a2c4902bd810">
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.CodingRule_Attribute.label"
+                metaclass="Standard.Attribute"
+                name="CodingRule_Attribute" owner-stereotype="" uid="164b939b-e361-11df-a678-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType is-hidden="true" is-signed="true"
+                        label="%tagtype.coding.label" name="coding"
+                        parameter-card="1" uid="8b8cb701-e364-11df-a678-0027103ea5f4"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.CodingRule_Instance.label"
+                metaclass="Standard.Instance" name="CodingRule_Instance"
+                owner-stereotype="" uid="d2034a31-e363-11df-a678-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType is-hidden="true" is-signed="true"
+                        label="%tagtype.coding.label" name="coding"
+                        parameter-card="1" uid="932de1f0-e364-11df-a678-0027103ea5f4"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.CodingRule_NameSpace.label"
+                metaclass="Standard.NameSpace"
+                name="CodingRule_NameSpace" owner-stereotype="" uid="6d93ea4e-e362-11df-a678-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType is-hidden="true" is-signed="true"
+                        label="%tagtype.coding.label" name="coding"
+                        parameter-card="1" uid="8fc9e038-e364-11df-a678-0027103ea5f4"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.DataPartition.label"
+                metaclass="Standard.Classifier" name="DataPartition"
+                owner-stereotype="" uid="2f1d9cda-e364-11df-a678-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.DataPool_Attribute.label"
+                metaclass="Standard.Attribute" name="DataPool_Attribute"
+                owner-stereotype="" uid="1878d458-e364-11df-a678-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.DataPool_Classifier.label"
+                metaclass="Standard.Classifier"
+                name="DataPool_Classifier" owner-stereotype="" uid="0fba242a-e364-11df-a678-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.DataSelector.label"
+                metaclass="Standard.Operation" name="DataSelector"
+                owner-stereotype="" uid="368dcb78-e364-11df-a678-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.Default.label"
+                metaclass="Standard.Behavior" name="Default"
+                owner-stereotype="" uid="43efe2e6-e339-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.DefaultApplication.label"
+                metaclass="Infrastructure.Dependency"
+                name="DefaultApplication" owner-stereotype="" uid="50726a80-e339-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.FinishAction.label"
+                metaclass="Standard.ActivityAction" name="FinishAction"
+                owner-stereotype="" uid="639bd821-e339-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.GetTimezoneAction.label"
+                metaclass="Standard.OpaqueAction"
+                name="GetTimezoneAction" owner-stereotype="" uid="6a3d2121-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.GetTimezoneAction_OpaqueAction.label"
+                metaclass="Standard.OpaqueAction"
+                name="GetTimezoneAction_OpaqueAction"
+                owner-stereotype="" uid="534b4816-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.LogAction.label"
+                metaclass="Standard.OpaqueAction" name="LogAction"
+                owner-stereotype="" uid="708b2e14-e339-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.ReadTimerAction.label"
+                metaclass="Standard.CallOperationAction"
+                name="ReadTimerAction" owner-stereotype="" uid="2daef040-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.SUT_Attribute.label"
+                metaclass="Standard.Attribute" name="SUT_Attribute"
+                owner-stereotype="" uid="5ce79f75-e279-11df-b95d-0027103ea5f4">
+                <Icon path="res/icon/gui/sut.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.SUT_BindableInstance.label"
+                metaclass="Standard.BindableInstance"
+                name="SUT_BindableInstance" owner-stereotype="" uid="483cdbe9-7e6f-41ae-8d2a-6ecd2e79ce1b">
+                <Icon path="res/icon/gui/sut.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.SetTimezoneAction.label"
+                metaclass="Standard.OpaqueAction"
+                name="SetTimezoneAction" owner-stereotype="" uid="715a99c1-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.SetTimezoneAction_OpaqueAction.label"
+                metaclass="Standard.OpaqueAction"
+                name="SetTimezoneAction_OpaqueAction"
+                owner-stereotype="" uid="5e3a7b2d-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.StartTimerAction.label"
+                metaclass="Standard.StateInvariant"
+                name="StartTimerAction" owner-stereotype="" uid="d74be1ee-e69b-11df-87fb-0027103ea5f4">
+                <Icon path="res/icon/gui/starttimer24.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.StartTimerAction_CallOperationAction.label"
+                metaclass="Standard.CallOperationAction"
+                name="StartTimerAction_CallOperationAction"
+                owner-stereotype="" uid="1a87576b-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.StopTimerAction.label"
+                metaclass="Standard.StateInvariant"
+                name="StopTimerAction" owner-stereotype="" uid="b3c1b78a-e69d-11df-87fb-0027103ea5f4">
+                <Icon path="res/icon/gui/stoptimer24.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.StopTimerAction_CallOperationAction.label"
+                metaclass="Standard.CallOperationAction"
+                name="StopTimerAction_CallOperationAction"
+                owner-stereotype="" uid="242e98cd-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TestCase_Behavior.label"
+                metaclass="Standard.Behavior" name="TestCase_Behavior"
+                owner-stereotype="" uid="26ede16d-e279-11df-b95d-0027103ea5f4">
+                <Icon path="res/icon/gui/testcase.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TestCase_Operation.label"
+                metaclass="Standard.Operation" name="TestCase_Operation"
+                owner-stereotype="" uid="ed653299-e278-11df-b95d-0027103ea5f4">
+                <Icon path="res/icon/gui/testcase.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TestComponent.label"
+                metaclass="Standard.Classifier" name="TestComponent"
+                owner-stereotype="" uid="13de32b1-e279-11df-b95d-0027103ea5f4">
+                <Icon path="res/icon/gui/testcomponent.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TestContext.label"
+                metaclass="Standard.Classifier" name="TestContext"
+                owner-stereotype="" uid="dd5475f6-e278-11df-b95d-0027103ea5f4">
+                <Icon path="res/icon/gui/testcontext.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TestLog.label"
+                metaclass="Standard.Behavior" name="TestLog"
+                owner-stereotype="" uid="71ed0cf4-e2ab-11df-b4b4-0027103ea5f4">
+                <Icon path="res/icon/gui/u2tp.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TestLogApplication.label"
+                metaclass="Infrastructure.Dependency"
+                name="TestLogApplication" owner-stereotype="" uid="83ba8aa0-e2ab-11df-b4b4-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TestObjective.label"
+                metaclass="Infrastructure.Dependency"
+                name="TestObjective" owner-stereotype="" uid="452c5975-e279-11df-b95d-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TestSet.label"
+                metaclass="Standard.Package" name="TestSet"
+                owner-stereotype="" uid="6cff6aed-e279-11df-b95d-0027103ea5f4">
+                <Icon path="res/icon/gui/testpackage.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TimeOut.label"
+                metaclass="Standard.Event" name="TimeOut"
+                owner-stereotype="" uid="f8f7c8bf-e339-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TimeOutAction.label"
+                metaclass="Standard.OpaqueAction" name="TimeOutAction"
+                owner-stereotype="" uid="0f55262d-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TimeOutMessage.label"
+                metaclass="Standard.Message" name="TimeOutMessage"
+                owner-stereotype="" uid="0180e89e-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.TimerRunningAction.label"
+                metaclass="Standard.OpaqueAction"
+                name="TimerRunningAction" owner-stereotype="" uid="41d5d72e-e33a-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.U2TPTypes.label"
+                metaclass="Standard.Package" name="U2TPTypes"
+                owner-stereotype="" uid="7141dc50-e69e-11df-87fb-0027103ea5f4">
+                <Icon path="res/icon/gui/ramc.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.ValidationAction.label"
+                metaclass="Standard.StateInvariant"
+                name="ValidationAction" owner-stereotype="" uid="e48dbbe4-e69d-11df-87fb-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype is-abstract="false" is-hidden="true"
+                label="%stereotype.ValidationAction_CallOperationAction.label"
+                metaclass="Standard.CallOperationAction"
+                name="ValidationAction_CallOperationAction"
+                owner-stereotype="" uid="5824d3f0-e339-11df-9694-0027103ea5f4">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+        </Profile>
+    </Profiles>
+    <Gui>
+        <ContextualMenu>
+            <CommandRef group="" group-image="" refid="SUT"/>
+            <CommandRef group="" group-image="" refid="Test_Case"/>
+            <CommandRef group="" group-image="" refid="Create_Test_Component"/>
+            <CommandRef group="" group-image="" refid="Test_Component"/>
+            <CommandRef group="" group-image="" refid="Test_Context"/>
+            <CommandRef group="" group-image="" refid="Create_Test_Context"/>
+            <CommandRef group="" group-image="" refid="Create_Test_Package"/>
+        </ContextualMenu>
+        <Commands>
+            <Command id="Test_Case" image="res/icon/gui/testcase.png"
+                label="%command.Test_Case.label" modify-model="true" tooltip="%command.Test_Case.tooltip">
+                <Scope metaclass="Standard.Classifier" stereotype="UTP#TestContext"/>
+                <Handler class="org.modelio.module.utp.commands.AddTestCase"/>
+            </Command>
+            <Command id="SUT" image="res/icon/gui/sut.png"
+                label="%command.SUT.label" modify-model="true" tooltip="%command.SUT.tooltip">
+                <Scope metaclass="Standard.BindableInstance" stereotype=""/>
+                <Handler class="org.modelio.module.utp.commands.ApplySUT"/>
+            </Command>
+            <Command id="Test_Component"
+                image="res/icon/gui/testcomponent.png"
+                label="%command.Test_Component.label"
+                modify-model="true" tooltip="%command.Test_Component.tooltip">
+                <Scope metaclass="Standard.Component" stereotype=""/>
+                <Handler class="org.modelio.module.utp.commands.ApplyTestComponent"/>
+            </Command>
+            <Command id="Test_Context"
+                image="res/icon/gui/testcontext.png"
+                label="%command.Test_Context.label" modify-model="true" tooltip="%command.Test_Context.tooltip">
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Handler class="org.modelio.module.utp.commands.ApplyTestContext"/>
+            </Command>
+            <Command id="Create_Test_Component"
+                image="res/icon/gui/testcomponent.png"
+                label="%command.Create_Test_Component.label"
+                modify-model="true" tooltip="%command.Create_Test_Component.tooltip">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.utp.commands.CreateTestComponent"/>
+            </Command>
+            <Command id="Create_Test_Context"
+                image="res/icon/gui/testcontext.png"
+                label="%command.Create_Test_Context.label"
+                modify-model="true" tooltip="%command.Create_Test_Context.tooltip">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.utp.commands.CreateTestContext"/>
+            </Command>
+            <Command id="Create_Test_Package"
+                image="res/icon/gui/testpackage.png"
+                label="%command.Create_Test_Package.label"
+                modify-model="true" tooltip="%command.Create_Test_Package.tooltip">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.utp.commands.CreateTestPackage"/>
+            </Command>
+        </Commands>
+    </Gui>
+    <Dependencies>
+        <Required name="ModelerModule" version="9.2.00"/>
+    </Dependencies>
+</Module>
