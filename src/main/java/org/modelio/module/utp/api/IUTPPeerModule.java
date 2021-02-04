@@ -3,9 +3,9 @@ package org.modelio.module.utp.api;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.IPeerModule;
 
-@objid ("c013a7be-d851-4a5e-9912-4392d65985e5")
+@objid ("6cdd2847-9b53-4b09-930d-64b77ba89918")
 public interface IUTPPeerModule extends IPeerModule {
-    @objid ("f716b98d-7f13-42ab-854a-a8906cedd2a6")
+    @objid ("70f2a8bb-f47d-4511-bd9c-abadf581d12f")
     public static final String MODULE_NAME = "UTP";
 
 }

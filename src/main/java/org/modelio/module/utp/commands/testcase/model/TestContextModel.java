@@ -27,13 +27,13 @@ import org.modelio.module.utp.impl.UTPModule;
 
 @objid ("d62bcb59-455a-4f61-89d7-a07d5c659f94")
 public class TestContextModel {
-    @objid ("76e684ae-3a46-4223-ac1f-558c4f763e5e")
+    @objid ("b36afc45-3d0d-4501-aab6-d8f120a6b674")
     private static Enumeration _verdict = null;
 
-    @objid ("d87b228b-7f5a-4a1a-a22c-a4f8c74e9067")
+    @objid ("e8eaa93d-32b0-4fa4-b9af-dd677951bc92")
     private Classifier _element;
 
-    @objid ("c9a86439-36bf-40e7-9249-0e9fe57cb15a")
+    @objid ("1ad6f635-a19d-408e-ad0f-c7e4fe413572")
     private IModelingSession _session;
 
     @objid ("012e6532-50aa-4636-a9e7-451cb523940f")

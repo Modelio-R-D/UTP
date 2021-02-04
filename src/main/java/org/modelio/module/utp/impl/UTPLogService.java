@@ -8,14 +8,15 @@ import org.modelio.api.module.context.log.ILogService;
  */
 @objid ("bb8c11cd-2edb-4498-9f78-f7b71510b761")
 public class UTPLogService {
-    @objid ("2df207cf-27c1-468b-9d8b-0bc2776c40f7")
-    private ILogService logService;
-
     @objid ("f9def642-dee7-48d0-8a6c-10fcda334d51")
     private UTPModule module;
 
+    @objid ("d64bd7a4-4aa8-4866-90d6-c6bf7e3875c4")
+    private ILogService logService;
+
     /**
      * Default constructor.
+     * 
      * @param logService the Modelio log service.
      * @param module the current instance of {@link UTPModule}.
      */
@@ -30,6 +31,7 @@ public class UTPLogService {
      * <p>
      * This method send logs on Modelio console only if the logs have been activated. The file and line of the log is
      * displayed in the Modelio console before the message.
+     * 
      * @param msg a message to be displayed as a log.
      */
     @objid ("46b77043-3ff6-4351-80d2-d2d8713cdc95")
@@ -42,6 +44,7 @@ public class UTPLogService {
      * <p>
      * This method send logs on Modelio console only if the logs have been activated. The file and line of the log is
      * displayed in the Modelio console before the message.
+     * 
      * @param msg a message to be displayed as a log.
      */
     @objid ("e2c478d4-f905-44eb-b7c1-a111e99db823")
@@ -54,6 +57,7 @@ public class UTPLogService {
      * <p>
      * This method send logs on Modelio console only if the logs have been activated. The file and line of the log is
      * displayed in the Modelio console before the message.
+     * 
      * @param msg a message to be displayed as a log.
      */
     @objid ("78c0c33e-4533-4e8b-9ccd-d2a23aeade68")

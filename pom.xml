@@ -40,7 +40,7 @@
 
     <!-- // Build // -->
     <build>
-        <sourceDirectory>Valeur du paramètre </sourceDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
             <!-- Use JVM 1.8 -->
             <plugin>
@@ -76,7 +76,7 @@
                 </executions>
                 <configuration>
                     <moduleFile>${project.basedir}/src/main/conf/module.xml</moduleFile>
-                    <sourceBasedir>Valeur du paramètre </sourceBasedir>
+                    <sourceBasedir>src/main/java</sourceBasedir>
                 </configuration>
             </plugin>
 

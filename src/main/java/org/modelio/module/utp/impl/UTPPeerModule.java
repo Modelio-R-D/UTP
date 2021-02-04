@@ -10,7 +10,7 @@ public class UTPPeerModule implements IUTPPeerModule {
     @objid ("7d7534a7-9ca6-4fbf-bf93-1a4b4bd99111")
     private UTPModule module = null;
 
-    @objid ("4add0106-8883-4677-a20b-7d4aa301d7aa")
+    @objid ("aac2d4df-e852-46f3-9c02-9c237c6f38d4")
     private IModuleAPIConfiguration peerConfiguration;
 
     @objid ("46681345-522b-43f1-8fa5-ecadff0e2afe")

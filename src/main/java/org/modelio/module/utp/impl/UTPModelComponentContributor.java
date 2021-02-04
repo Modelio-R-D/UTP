@@ -37,10 +37,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("6f97d940-56b5-499a-a9a3-b30e53b7b061")
 public class UTPModelComponentContributor extends AbstractModelComponentContributor {
-    @objid ("b062cb3d-904f-4ce4-b67d-a960a7038a36")
+    @objid ("a37d165c-a967-42bd-976b-4418697286ee")
     private IModelingSession session = null;
 
-    @objid ("204d2e8f-b953-4499-aae0-7c4b6fda6e2a")
+    @objid ("c5c6f3da-5f96-4e03-baaa-29840139579b")
     private MMetamodel mm = null;
 
     @objid ("58a7056d-9712-4cdc-9a62-57b6b8b26f96")
@@ -52,7 +52,6 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
 
     /**
      * Get a TagType from the metamodel extensions.
-     * @throws MdaExtensionNotFoundException
      */
     @objid ("5853af0d-bd7f-4c9e-870c-f5e3b1273a8c")
     private TagType getTagType(java.lang.Class<? extends MObject> metaclass, String tagTypeName) {
@@ -62,7 +61,6 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
 
     /**
      * Get a NoteType from the metamodel extensions.
-     * @throws MdaExtensionNotFoundException
      */
     @objid ("d8ae2525-7dca-4ebf-855f-63e5670290c7")
     private NoteType getNoteType(java.lang.Class<? extends MObject> metaclass, String noteTypeName) {
@@ -72,7 +70,6 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
 
     /**
      * Get a Steretotype from the metamodel extensions.
-     * @throws SteretotypeNotFoundException
      */
     @objid ("5fe3a581-7879-4273-9b75-7f07427308da")
     private Stereotype getStereotype(java.lang.Class<? extends MObject> metaclass, String stereotypeName) {
@@ -181,7 +178,7 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
         /**
          * The element to exclude.
          */
-        @objid ("75b560ce-5600-4f7b-9d39-9abbe22b4ef4")
+        @objid ("7ec6f807-51fb-47bb-bc43-3f981d27542a")
         private Element eltToExclude;
 
         /**
@@ -194,6 +191,7 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
 
         /**
          * Check if this element has to be excluded.
+         * 
          * @param eltToFilter The element to check.
          * @return True if the eltToFilter is not the eltToExclude
          */

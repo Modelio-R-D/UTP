@@ -32,22 +32,22 @@ import org.modelio.module.utp.i18n.I18nMessageService;
 
 @objid ("0d67ed59-98c4-45fb-b7f8-75ac51229eaf")
 public class TestCaseView extends ModelioDialog implements ITestCaseView {
-    @objid ("7f26ba96-5a81-4986-a300-52d1107f8a46")
+    @objid ("b5c73757-c42a-44e0-a4a0-b9055e948ff8")
     private Text _commandName;
 
-    @objid ("0651341d-5def-4c81-acb6-e9e3e2db5a27")
+    @objid ("fac1e10a-0d7b-471b-973b-88e336bb1c45")
     private Text _testObjective;
 
-    @objid ("528a5045-961e-4a03-993c-aec7ad7c154b")
+    @objid ("dfab327b-1dc3-4115-a44e-648d40d1b8c3")
     private Button _ok;
 
-    @objid ("f3208c0c-9fc8-43d9-94a3-8156f529b100")
+    @objid ("08313e08-0048-4b8f-85f5-4a2ff18998eb")
     private Button _cancel;
 
-    @objid ("20465fc2-51c8-4bb9-9236-b979cc7b7458")
+    @objid ("d8bf75e6-a864-4005-bd88-b45ef75848fc")
     private Composite _composite;
 
-    @objid ("7fd24b7a-f469-4fb7-b304-e65219d5a222")
+    @objid ("ced34cf7-3574-4e18-ac79-cf6a094bd2ee")
     private Button _createSequenceDiagram;
 
     @objid ("34753f68-4659-4260-a630-cc80bfac516b")

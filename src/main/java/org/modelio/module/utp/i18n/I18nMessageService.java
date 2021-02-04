@@ -50,6 +50,7 @@ public class I18nMessageService {
 
     /**
      * Get message value from key.
+     * 
      * @param key the key for the desired string.
      * @return the string for the given key.
      */
@@ -67,6 +68,7 @@ public class I18nMessageService {
 
     /**
      * Get list of messages values from key with parameters.
+     * 
      * @param key the key for the desired string.
      * @param params an array of objects to be formatted and substituted.
      * @return the string for the given key.
