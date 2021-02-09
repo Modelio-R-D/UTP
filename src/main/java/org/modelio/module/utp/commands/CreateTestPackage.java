@@ -1,7 +1,6 @@
 package org.modelio.module.utp.commands;
 
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramNode;
@@ -20,9 +19,7 @@ import org.modelio.module.utp.api.IUTPPeerModule;
 import org.modelio.module.utp.api.UTPStereotypes;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("536807e6-3f7b-49bc-a9bb-522a25a64a2a")
 public class CreateTestPackage extends DefaultModuleCommandHandler {
-    @objid ("98a2df3e-2cfc-401d-9d25-6d71a2a52a48")
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = module.getModuleContext().getModelingSession();
@@ -65,7 +62,6 @@ public class CreateTestPackage extends DefaultModuleCommandHandler {
      * This methods authorizes a command to be displayed in a defined context.
      * The commands are displayed, by default, depending on the kind of metaclass on which the command has been launched.
      */
-    @objid ("4465460b-f100-48c0-a6ad-b65163d244ad")
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         for (MObject selectedElt : selectedElements){
@@ -84,13 +80,11 @@ public class CreateTestPackage extends DefaultModuleCommandHandler {
      * This method specifies whether or not a command must be deactivated.
      * If the command has to be displayed (which means that the accept method has returned a positive value, it is sometimes needed to desactivate the command depending on specific constraints that are specific to the module.
      */
-    @objid ("ddc6f557-de18-4078-8fab-bb6adc7dede6")
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         return true;
     }
 
-    @objid ("7be04406-2501-4d1b-bbed-eb8861d74e04")
     private void createClassDiagram(Package thepackage, IModule module) {
         IModelingSession session = module.getModuleContext().getModelingSession();
         IDiagramService ds = module.getModuleContext().getModelioServices().getDiagramService();        

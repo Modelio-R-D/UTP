@@ -9,7 +9,6 @@ package org.modelio.module.utp.api.utpprofile.standard.calloperationaction;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
@@ -31,15 +30,12 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <p>Stereotype description:
  * <br/><i></i></p>
  */
-@objid ("f21ed9d2-85d2-458f-917f-cfd26888986e")
 public class StartTimerActionCallOperationAction {
-    @objid ("87f2be20-f783-413a-935c-e8a375b921c5")
     public static final String STEREOTYPE_NAME = "StartTimerAction_CallOperationAction";
 
     /**
      * The underlying {@link CallOperationAction} represented by this proxy, never null.
      */
-    @objid ("94d5ca55-fc3b-4d4c-9caa-55d41d5f5cbb")
     protected final CallOperationAction elt;
 
     /**
@@ -50,7 +46,6 @@ public class StartTimerActionCallOperationAction {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("eede9b97-7155-4d12-9e5d-74ee59529d8c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof CallOperationAction) && ((CallOperationAction) elt).isStereotyped(IUTPPeerModule.MODULE_NAME, StartTimerActionCallOperationAction.STEREOTYPE_NAME));
     }
@@ -60,7 +55,6 @@ public class StartTimerActionCallOperationAction {
      * 
      * @return a {@link StartTimerActionCallOperationAction} proxy on the created {@link CallOperationAction}.
      */
-    @objid ("f1c0bfdb-e19b-4a9e-8b5e-9df2a94843ed")
     public static StartTimerActionCallOperationAction create() {
         ModelElement e = (ModelElement)UTPModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.CallOperationAction");
         e.addStereotype(IUTPPeerModule.MODULE_NAME, StartTimerActionCallOperationAction.STEREOTYPE_NAME);
@@ -74,7 +68,6 @@ public class StartTimerActionCallOperationAction {
      * @param obj a CallOperationAction
      * @return a {@link StartTimerActionCallOperationAction} proxy or <i>null</i>.
      */
-    @objid ("8ed0f46f-1ba4-42c3-ad17-2b815d667826")
     public static StartTimerActionCallOperationAction instantiate(final CallOperationAction obj) {
         return StartTimerActionCallOperationAction.canInstantiate(obj) ? new StartTimerActionCallOperationAction(obj) : null;
     }
@@ -87,7 +80,6 @@ public class StartTimerActionCallOperationAction {
      * @return a {@link StartTimerActionCallOperationAction} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("01a4222d-f806-4c81-81c4-ea48b6680fda")
     public static StartTimerActionCallOperationAction safeInstantiate(final CallOperationAction obj) throws IllegalArgumentException {
         if (StartTimerActionCallOperationAction.canInstantiate(obj))
         	return new StartTimerActionCallOperationAction(obj);
@@ -95,7 +87,6 @@ public class StartTimerActionCallOperationAction {
         	throw new IllegalArgumentException("StartTimerActionCallOperationAction: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("ddc0ef09-3dec-4703-a8be-04c9a8cc6fb8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,34 +106,26 @@ public class StartTimerActionCallOperationAction {
      * Get the underlying {@link CallOperationAction}. 
      * @return the CallOperationAction represented by this proxy, never null.
      */
-    @objid ("c78cd531-bbfe-4c70-a350-b6170b55fee9")
     public CallOperationAction getElement() {
         return this.elt;
     }
 
-    @objid ("3a6fdaa6-7cb2-40eb-9ac1-34bf11388bde")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("1aa5de84-94d7-41a5-aa80-eb144673850c")
     protected StartTimerActionCallOperationAction(final CallOperationAction elt) {
         this.elt = elt;
     }
 
-    @objid ("57e714d6-49e0-42fb-98c1-babeb27f2caa")
     public static final class MdaTypes {
-        @objid ("22c55e8f-d423-4eb8-897d-d910de653402")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("03e3857e-a9e2-41b3-976f-9a9859799634")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c693fb4b-d233-4aec-8e84-8183c42f5cc0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("62705303-5509-4f2a-93b9-3d9af2b19738")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "1a87576b-e33a-11df-9694-0027103ea5f4");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

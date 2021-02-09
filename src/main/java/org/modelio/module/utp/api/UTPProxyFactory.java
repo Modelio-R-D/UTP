@@ -6,7 +6,6 @@
  */
 package org.modelio.module.utp.api;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.metamodel.mda.ModuleComponent;
 import org.modelio.metamodel.uml.behavior.activityModel.ActivityAction;
 import org.modelio.metamodel.uml.behavior.activityModel.CallOperationAction;
@@ -74,9 +73,7 @@ import org.modelio.metamodel.visitors.IInfrastructureVisitor;
  * <li><< ValidationAction_CallOperationAction >> on a {@link org.modelio.metamodel.uml.behavior.activityModel.CallOperationAction}: instantiates a {@link ValidationActionCallOperationAction}
  * </ul>
  */
-@objid ("b350fe0a-1546-4ef4-aeea-e0da0af9fc60")
 public class UTPProxyFactory {
-    @objid ("bd0cf975-629f-467d-80eb-d39ded73238e")
     private static final InstantiateVisitor instantiateVisitor = new InstantiateVisitor();
 
     /**
@@ -88,7 +85,6 @@ public class UTPProxyFactory {
      * @param e A model element
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("9a37eda7-5216-4e8d-8851-e3c5d9df9ff5")
     public static final Object instantiate(final ModelElement e) {
         for (Stereotype s : e.getExtension()) {
               ModuleComponent module = s.getModule();
@@ -109,23 +105,18 @@ public class UTPProxyFactory {
      * @param stName A stereotype name.
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("fc4c43e7-827c-4c40-9ce6-76ad87779123")
     public static final Object instantiate(final Element e, final String stName) {
         instantiateVisitor.setStereotype(stName);
         return e.accept(instantiateVisitor);
     }
 
-    @objid ("d0c9d5de-5b86-48c1-9f69-48687b7f4be9")
     private static class InstantiateVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
-        @objid ("86b39858-fa4f-46c9-8e08-1adce21cd93b")
         private String stName;
 
-        @objid ("eab41589-395e-4d47-b124-e51e0f7f9b0c")
         public final void setStereotype(final String stName) {
             this.stName = stName;
         }
 
-        @objid ("32f7bc4e-67a3-4445-9e74-0c2f7888e95d")
         @Override
         public final Object visitBehavior(Behavior obj) {
             switch (this.stName) {
@@ -139,7 +130,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitBehavior(obj);
         }
 
-        @objid ("d3cad9a0-4410-498f-9ac6-e6ddf81bb817")
         @Override
         public final Object visitDependency(Dependency obj) {
             switch (this.stName) {
@@ -153,7 +143,6 @@ public class UTPProxyFactory {
             return IDefaultInfrastructureVisitor.super.visitDependency(obj);
         }
 
-        @objid ("11b8042c-44ec-4421-823e-531784a33717")
         @Override
         public final Object visitStateInvariant(StateInvariant obj) {
             switch (this.stName) {
@@ -167,7 +156,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitStateInvariant(obj);
         }
 
-        @objid ("da3cdffe-5298-40ab-b3a3-1e41f7ed6698")
         @Override
         public final Object visitInstance(Instance obj) {
             switch (this.stName) {
@@ -179,7 +167,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitInstance(obj);
         }
 
-        @objid ("6b6c4754-064a-401a-b35f-e97d5257738d")
         @Override
         public final Object visitBindableInstance(BindableInstance obj) {
             switch (this.stName) {
@@ -191,7 +178,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitBindableInstance(obj);
         }
 
-        @objid ("86f48d13-560b-4897-a130-8256b8f08258")
         @Override
         public final Object visitOperation(Operation obj) {
             switch (this.stName) {
@@ -204,7 +190,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitOperation(obj);
         }
 
-        @objid ("9995cbe7-b5d0-45ae-b431-c82bb7a4b130")
         @Override
         public final Object visitClassifier(Classifier obj) {
             switch (this.stName) {
@@ -219,7 +204,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitClassifier(obj);
         }
 
-        @objid ("aeb7ffc2-e5ba-4da4-8e05-9b5e340c9973")
         @Override
         public final Object visitCallOperationAction(CallOperationAction obj) {
             switch (this.stName) {
@@ -234,7 +218,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitCallOperationAction(obj);
         }
 
-        @objid ("4928f3ed-7da7-485a-b06d-dbaabd149004")
         @Override
         public final Object visitMessage(Message obj) {
             switch (this.stName) {
@@ -246,7 +229,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitMessage(obj);
         }
 
-        @objid ("e8d19694-5496-4ca9-8185-4feb2be5d408")
         @Override
         public final Object visitEvent(Event obj) {
             switch (this.stName) {
@@ -258,7 +240,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitEvent(obj);
         }
 
-        @objid ("12673c4d-1502-41c1-84d3-333236e1b1e9")
         @Override
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
@@ -272,7 +253,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitAttribute(obj);
         }
 
-        @objid ("5facb0cd-8dd4-4510-b581-917ae875f8ae")
         @Override
         public final Object visitPackage(Package obj) {
             switch (this.stName) {
@@ -285,7 +265,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitPackage(obj);
         }
 
-        @objid ("93cfb2ee-802c-4b4b-86d9-dd1f23fc0474")
         @Override
         public final Object visitOpaqueAction(OpaqueAction obj) {
             switch (this.stName) {
@@ -303,7 +282,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitOpaqueAction(obj);
         }
 
-        @objid ("8cd38ab6-8310-4c3a-9d75-659c9798dc5b")
         @Override
         public final Object visitActivityAction(ActivityAction obj) {
             switch (this.stName) {
@@ -315,7 +293,6 @@ public class UTPProxyFactory {
             return IDefaultModelVisitor.super.visitActivityAction(obj);
         }
 
-        @objid ("67336e92-68ed-4058-81bb-bf1d98c08cf6")
         @Override
         public final Object visitNameSpace(NameSpace obj) {
             switch (this.stName) {
@@ -332,7 +309,6 @@ public class UTPProxyFactory {
          * <p>If null is returned the caller will return null.
          * @return the {@link IInfrastructureVisitor} visitor or <i>null</i>.
          */
-        @objid ("5e3d5b8e-7642-48c5-8934-ff936a9c17ed")
         @Override
         public IInfrastructureVisitor getInfrastructureVisitor() {
             return this;

@@ -9,7 +9,6 @@ package org.modelio.module.utp.api.utpprofile.infrastructure.dependency;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
@@ -30,15 +29,12 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <p>Stereotype description:
  * <br/><i></i></p>
  */
-@objid ("8b3c240e-2708-4699-a229-89f434365009")
 public class TestObjective {
-    @objid ("7d5d2069-7eec-4c56-a396-66660eeec552")
     public static final String STEREOTYPE_NAME = "TestObjective";
 
     /**
      * The underlying {@link Dependency} represented by this proxy, never null.
      */
-    @objid ("e843b6f7-816d-463c-81ed-ad81d891e70c")
     protected final Dependency elt;
 
     /**
@@ -49,7 +45,6 @@ public class TestObjective {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("cc3ce136-cdb5-456c-8ba7-6c9e852127a3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Dependency) && ((Dependency) elt).isStereotyped(IUTPPeerModule.MODULE_NAME, TestObjective.STEREOTYPE_NAME));
     }
@@ -59,7 +54,6 @@ public class TestObjective {
      * 
      * @return a {@link TestObjective} proxy on the created {@link Dependency}.
      */
-    @objid ("8ec68bec-86db-47a2-b410-57f069d87f81")
     public static TestObjective create() {
         ModelElement e = (ModelElement)UTPModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Infrastructure.Dependency");
         e.addStereotype(IUTPPeerModule.MODULE_NAME, TestObjective.STEREOTYPE_NAME);
@@ -73,7 +67,6 @@ public class TestObjective {
      * @param obj a Dependency
      * @return a {@link TestObjective} proxy or <i>null</i>.
      */
-    @objid ("478ccbbc-1a1c-428e-9a61-698c88443c66")
     public static TestObjective instantiate(final Dependency obj) {
         return TestObjective.canInstantiate(obj) ? new TestObjective(obj) : null;
     }
@@ -86,7 +79,6 @@ public class TestObjective {
      * @return a {@link TestObjective} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e8d1497a-9491-4650-b862-dd8c58aabf34")
     public static TestObjective safeInstantiate(final Dependency obj) throws IllegalArgumentException {
         if (TestObjective.canInstantiate(obj))
         	return new TestObjective(obj);
@@ -94,7 +86,6 @@ public class TestObjective {
         	throw new IllegalArgumentException("TestObjective: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("0138cf8a-3527-4e90-b0f0-67d7b0ec7117")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -114,34 +105,26 @@ public class TestObjective {
      * Get the underlying {@link Dependency}. 
      * @return the Dependency represented by this proxy, never null.
      */
-    @objid ("be09148a-1e96-4820-8d5d-68ebbe93f96a")
     public Dependency getElement() {
         return this.elt;
     }
 
-    @objid ("fc4b579a-ca09-40df-8337-f711a5cf33e4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("e8910a73-cae6-42e5-936b-a1ea64aec588")
     protected TestObjective(final Dependency elt) {
         this.elt = elt;
     }
 
-    @objid ("d94ffeb5-8c07-4c87-b3cd-9200592fa25c")
     public static final class MdaTypes {
-        @objid ("415c364d-0cda-4746-9001-c81fbed10297")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4b274df9-17d4-45a5-b5b1-8e98c99d08e8")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("8ae401cb-ba61-46ad-b30c-01b83f1d9ca2")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("3b592150-7324-4076-937a-7941a01418cb")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "452c5975-e279-11df-b95d-0027103ea5f4");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

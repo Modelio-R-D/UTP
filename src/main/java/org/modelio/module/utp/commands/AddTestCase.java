@@ -18,9 +18,7 @@ import org.modelio.module.utp.commands.testcase.ui.TestCaseView;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 public class AddTestCase extends DefaultModuleCommandHandler {
-
     private TestCaseView _view;
-
 
     private TestContextModel _model;
 
@@ -31,19 +29,19 @@ public class AddTestCase extends DefaultModuleCommandHandler {
         this._view.create();
         this._view.setBlockOnOpen(false);
         this._view.addOKListener(new SelectionListener(){
-
+        
             @Override
             public void widgetSelected(SelectionEvent arg0) {
                 fillModel(module);
                 clear();
             }
-
+        
             @Override
             public void widgetDefaultSelected(SelectionEvent arg0) {
                 // TODO Auto-generated method stub
-
+        
             }
-
+        
         });
         this. _view.open();
     }
@@ -74,10 +72,10 @@ public class AddTestCase extends DefaultModuleCommandHandler {
 
     void fillModel(IModule module) {
         try (ITransaction tr = module.getModuleContext().getModelingSession().createTransaction("AddTestCase")) {
-
+        
             Operation operation =  this._model.createTestCase(this._view.getTestCaseName());
             this._model.createTestObjective(operation, this._view.getTestObjectiveDescription());
-
+        
             if(this._view.hasSequenceDiagram()){
                 try(IDiagramHandle diagram = this._view.createSequenceDiagram(this._model.createInteraction(operation), module); ){
                     module.getModuleContext().getModelioServices().getNavigationService().fireNavigate(diagram.getDiagram());
@@ -87,7 +85,7 @@ public class AddTestCase extends DefaultModuleCommandHandler {
             }else{
                 module.getModuleContext().getModelioServices().getNavigationService().fireNavigate(operation);
             }
-
+        
             this._view.unmaskTestCase(operation, module);
             tr.commit();
         }

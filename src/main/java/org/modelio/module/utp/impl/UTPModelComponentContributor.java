@@ -3,7 +3,6 @@ package org.modelio.module.utp.impl;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.modelio.mc.AbstractModelComponentContributor;
 import org.modelio.api.modelio.model.IMetamodelExtensions;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -35,15 +34,11 @@ import org.modelio.vcore.smkernel.mapi.MClass;
 import org.modelio.vcore.smkernel.mapi.MMetamodel;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("6f97d940-56b5-499a-a9a3-b30e53b7b061")
 public class UTPModelComponentContributor extends AbstractModelComponentContributor {
-    @objid ("a37d165c-a967-42bd-976b-4418697286ee")
     private IModelingSession session = null;
 
-    @objid ("c5c6f3da-5f96-4e03-baaa-29840139579b")
     private MMetamodel mm = null;
 
-    @objid ("58a7056d-9712-4cdc-9a62-57b6b8b26f96")
     public UTPModelComponentContributor(IModule module) {
         super(module);
         this.session = module.getModuleContext().getModelingSession();
@@ -53,7 +48,6 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
     /**
      * Get a TagType from the metamodel extensions.
      */
-    @objid ("5853af0d-bd7f-4c9e-870c-f5e3b1273a8c")
     private TagType getTagType(java.lang.Class<? extends MObject> metaclass, String tagTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getTagType(IUTPPeerModule.MODULE_NAME, tagTypeName, this.mm.getMClass(metaclass));
@@ -62,7 +56,6 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
     /**
      * Get a NoteType from the metamodel extensions.
      */
-    @objid ("d8ae2525-7dca-4ebf-855f-63e5670290c7")
     private NoteType getNoteType(java.lang.Class<? extends MObject> metaclass, String noteTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getNoteType(IUTPPeerModule.MODULE_NAME, noteTypeName, this.mm.getMClass(metaclass));
@@ -71,13 +64,11 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
     /**
      * Get a Steretotype from the metamodel extensions.
      */
-    @objid ("5fe3a581-7879-4273-9b75-7f07427308da")
     private Stereotype getStereotype(java.lang.Class<? extends MObject> metaclass, String stereotypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getStereotype(IUTPPeerModule.MODULE_NAME, stereotypeName, this.mm.getMClass(metaclass));
     }
 
-    @objid ("c4c2aa49-31a0-4df3-b2ca-57c88e4825d2")
     @Override
     public Set<Stereotype> getDependencyStereotypes() {
         Set<Stereotype> stereotypes = new HashSet<>();       
@@ -121,7 +112,6 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
         return stereotypes;
     }
 
-    @objid ("99d8bd55-2ea3-4e74-84ed-2936c7b11a71")
     @Override
     public Set<TagType> getTagTypes() {
         Set<TagType> tagTypes = new HashSet<>();       
@@ -131,20 +121,17 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
         return tagTypes;
     }
 
-    @objid ("765e0e95-4efa-437d-baab-1479a383a824")
     @Override
     public Set<NoteType> getNoteTypes() {
         Set<NoteType> noteTypes = new HashSet<>();
         return noteTypes;
     }
 
-    @objid ("aa6a233b-78c1-4cb8-8e14-b439407abbbe")
     @Override
     public Set<MObject> getElements() {
         return Collections.emptySet();
     }
 
-    @objid ("ccfb2414-a46b-4277-a532-19d275e90fa4")
     @Override
     public Set<ExportedFileEntry> getFiles() {
         return Collections.emptySet();
@@ -153,7 +140,6 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
     /**
      * Get a NoteType from the metamodel extensions.
      */
-    @objid ("d844ca7d-f06a-4968-8a01-82abf8fb0d30")
     private NoteType getNoteType(String sterotypeName, java.lang.Class<? extends MObject> metaclass, String noteTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         MClass mClass = this.mm.getMClass(metaclass);
@@ -163,7 +149,6 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
     /**
      * Get a tagType from the metamodel extensions.
      */
-    @objid ("a604529f-003c-4e2c-82f7-9b04ce19ee78")
     private TagType getTagType(String sterotypeName, java.lang.Class<? extends MObject> metaclass, String tagTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         MClass mClass = this.mm.getMClass(metaclass);
@@ -173,18 +158,15 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
     /**
      * A custom filter allowing to remove a specific element from an List.
      */
-    @objid ("5a56dd57-a8e0-4d73-a199-df6c7773627a")
     private class ExcludeElementFilter implements IObjectFilter {
         /**
          * The element to exclude.
          */
-        @objid ("7ec6f807-51fb-47bb-bc43-3f981d27542a")
         private Element eltToExclude;
 
         /**
          * Default constructor.
          */
-        @objid ("db21ff15-9a0a-4746-a852-eeadf441487e")
         public ExcludeElementFilter(final Element eltToExclude) {
             this.eltToExclude = eltToExclude;
         }
@@ -195,12 +177,10 @@ public class UTPModelComponentContributor extends AbstractModelComponentContribu
          * @param eltToFilter The element to check.
          * @return True if the eltToFilter is not the eltToExclude
          */
-        @objid ("c2c29606-6456-44f1-90d5-80014e3f7e8d")
         public boolean select(Element eltToFilter) {
             return !this.eltToExclude.equals(eltToFilter);
         }
 
-        @objid ("ae635648-3797-47cd-b06c-535d7b3707df")
         @Override
         public boolean accept(MObject arg0) {
             return !this.eltToExclude.equals(arg0);

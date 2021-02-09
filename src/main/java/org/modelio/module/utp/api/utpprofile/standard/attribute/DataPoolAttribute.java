@@ -9,7 +9,6 @@ package org.modelio.module.utp.api.utpprofile.standard.attribute;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
@@ -31,15 +30,12 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <p>Stereotype description:
  * <br/><i></i></p>
  */
-@objid ("6c650a68-335f-40c9-a79b-a2426efb232f")
 public class DataPoolAttribute {
-    @objid ("a6d50afa-0b8b-4166-aaaf-e1621d6d531a")
     public static final String STEREOTYPE_NAME = "DataPool_Attribute";
 
     /**
      * The underlying {@link Attribute} represented by this proxy, never null.
      */
-    @objid ("472cd753-42a2-4d2d-a821-34f0e56f616c")
     protected final Attribute elt;
 
     /**
@@ -50,7 +46,6 @@ public class DataPoolAttribute {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("93d5d888-162a-4e85-b95a-15eee5e01490")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Attribute) && ((Attribute) elt).isStereotyped(IUTPPeerModule.MODULE_NAME, DataPoolAttribute.STEREOTYPE_NAME));
     }
@@ -60,7 +55,6 @@ public class DataPoolAttribute {
      * 
      * @return a {@link DataPoolAttribute} proxy on the created {@link Attribute}.
      */
-    @objid ("508bd25e-0fcb-40ba-83c0-487bba89c29c")
     public static DataPoolAttribute create() {
         ModelElement e = (ModelElement)UTPModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.Attribute");
         e.addStereotype(IUTPPeerModule.MODULE_NAME, DataPoolAttribute.STEREOTYPE_NAME);
@@ -74,7 +68,6 @@ public class DataPoolAttribute {
      * @param obj a Attribute
      * @return a {@link DataPoolAttribute} proxy or <i>null</i>.
      */
-    @objid ("5b4cbe02-8d3d-4117-92b3-2b585fefa6e7")
     public static DataPoolAttribute instantiate(final Attribute obj) {
         return DataPoolAttribute.canInstantiate(obj) ? new DataPoolAttribute(obj) : null;
     }
@@ -87,7 +80,6 @@ public class DataPoolAttribute {
      * @return a {@link DataPoolAttribute} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("4fb6a036-3b52-44b5-abec-3e9968e33a8a")
     public static DataPoolAttribute safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (DataPoolAttribute.canInstantiate(obj))
         	return new DataPoolAttribute(obj);
@@ -95,7 +87,6 @@ public class DataPoolAttribute {
         	throw new IllegalArgumentException("DataPoolAttribute: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("67711490-d275-4f2d-b9c0-4debb4280bf9")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,34 +106,26 @@ public class DataPoolAttribute {
      * Get the underlying {@link Attribute}. 
      * @return the Attribute represented by this proxy, never null.
      */
-    @objid ("5d6e5279-b155-4c66-ab2e-202f9f0a9297")
     public Attribute getElement() {
         return this.elt;
     }
 
-    @objid ("825e59d0-3886-459a-bf0d-1803aa4fe5df")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("3f97659f-0490-4ad1-be03-90dfd3d6c79e")
     protected DataPoolAttribute(final Attribute elt) {
         this.elt = elt;
     }
 
-    @objid ("5b98d66e-2cf9-4ac3-b418-9c94f262d5b6")
     public static final class MdaTypes {
-        @objid ("f73a2093-a829-4acc-bb87-da50b632964b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("214b7c44-cf5e-4c3f-a4cd-758cd7ac1e1f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("07e6d9bd-92f8-4f0d-b446-a8af311179d1")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e54f026a-6a6d-431f-ad32-2ced2a0db17f")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "1878d458-e364-11df-a678-0027103ea5f4");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

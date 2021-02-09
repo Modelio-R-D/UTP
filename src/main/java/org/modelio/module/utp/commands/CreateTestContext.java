@@ -2,7 +2,6 @@ package org.modelio.module.utp.commands;
 
 import java.util.Collection;
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramNode;
@@ -28,9 +27,7 @@ import org.modelio.module.utp.impl.UTPModule;
 import org.modelio.vcore.smkernel.mapi.MMetamodel;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("d11d2b52-3312-4bd9-83b2-bf185503a3c1")
 public class CreateTestContext extends DefaultModuleCommandHandler {
-    @objid ("da4a37e6-b15b-43b5-adde-57d211762dda")
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = module.getModuleContext().getModelingSession();
@@ -100,7 +97,6 @@ public class CreateTestContext extends DefaultModuleCommandHandler {
      * This methods authorizes a command to be displayed in a defined context.
      * The commands are displayed, by default, depending on the kind of metaclass on which the command has been launched.
      */
-    @objid ("e497e2ab-a807-48f2-8154-92904ef681c1")
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         return (selectedElements.size() == 1) && 
@@ -111,13 +107,11 @@ public class CreateTestContext extends DefaultModuleCommandHandler {
      * This method specifies whether or not a command must be deactivated.
      * If the command has to be displayed (which means that the accept method has returned a positive value, it is sometimes needed to desactivate the command depending on specific constraints that are specific to the module.
      */
-    @objid ("10380f49-2838-4178-95b0-92bf427f84c4")
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         return true;
     }
 
-    @objid ("38d0ebd1-6a02-466d-8432-42e4f11d3870")
     private static void createAttribute(String classname, Classifier classifier, IModule module) {
         IModelingSession session =  module.getModuleContext().getModelingSession();
         MMetamodel mm = module.getModuleContext().getModelioServices().getMetamodelService().getMetamodel();
@@ -131,7 +125,6 @@ public class CreateTestContext extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("5fc9c25f-23aa-4df4-91ef-7051194868c8")
     private static void createDiagram(Class aclass, IModule module) {
         IModelingSession session = module.getModuleContext().getModelingSession();
         MMetamodel mm = module.getModuleContext().getModelioServices().getMetamodelService().getMetamodel();

@@ -9,7 +9,6 @@ package org.modelio.module.utp.api.utpprofile.standard.opaqueaction;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
@@ -31,15 +30,12 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <p>Stereotype description:
  * <br/><i></i></p>
  */
-@objid ("d7ab37ef-4c68-4481-991f-d658da5f40ab")
 public class TimeOutAction {
-    @objid ("a80214ce-14c3-4b00-a31c-73ec5ec6a17c")
     public static final String STEREOTYPE_NAME = "TimeOutAction";
 
     /**
      * The underlying {@link OpaqueAction} represented by this proxy, never null.
      */
-    @objid ("523a4e88-14ec-41f0-b8d5-1c0a0c0badea")
     protected final OpaqueAction elt;
 
     /**
@@ -50,7 +46,6 @@ public class TimeOutAction {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d36c1c4b-4a83-4799-bbb7-aad4d1eda96a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof OpaqueAction) && ((OpaqueAction) elt).isStereotyped(IUTPPeerModule.MODULE_NAME, TimeOutAction.STEREOTYPE_NAME));
     }
@@ -60,7 +55,6 @@ public class TimeOutAction {
      * 
      * @return a {@link TimeOutAction} proxy on the created {@link OpaqueAction}.
      */
-    @objid ("7d647881-61e6-41e4-b420-aa64b07d6b9b")
     public static TimeOutAction create() {
         ModelElement e = (ModelElement)UTPModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.OpaqueAction");
         e.addStereotype(IUTPPeerModule.MODULE_NAME, TimeOutAction.STEREOTYPE_NAME);
@@ -74,7 +68,6 @@ public class TimeOutAction {
      * @param obj a OpaqueAction
      * @return a {@link TimeOutAction} proxy or <i>null</i>.
      */
-    @objid ("7ccee1ae-e273-4e34-a2d1-0d6d8de65ebd")
     public static TimeOutAction instantiate(final OpaqueAction obj) {
         return TimeOutAction.canInstantiate(obj) ? new TimeOutAction(obj) : null;
     }
@@ -87,7 +80,6 @@ public class TimeOutAction {
      * @return a {@link TimeOutAction} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f3776461-10cf-4998-b733-9ff3adc0bd7d")
     public static TimeOutAction safeInstantiate(final OpaqueAction obj) throws IllegalArgumentException {
         if (TimeOutAction.canInstantiate(obj))
         	return new TimeOutAction(obj);
@@ -95,7 +87,6 @@ public class TimeOutAction {
         	throw new IllegalArgumentException("TimeOutAction: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("569e1088-53b9-42cb-9528-f4b7f9ce5a28")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,34 +106,26 @@ public class TimeOutAction {
      * Get the underlying {@link OpaqueAction}. 
      * @return the OpaqueAction represented by this proxy, never null.
      */
-    @objid ("21734e75-ed5a-478f-b446-fa5906fecb7d")
     public OpaqueAction getElement() {
         return this.elt;
     }
 
-    @objid ("cb473867-e78e-422a-93b2-8663f7323474")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("d448b2cd-bf99-4ee6-98d5-6396da342da3")
     protected TimeOutAction(final OpaqueAction elt) {
         this.elt = elt;
     }
 
-    @objid ("c630168d-17e3-42dd-8713-734d6267c9b3")
     public static final class MdaTypes {
-        @objid ("9a5d3f61-f5e2-4293-8f7d-2a80907085a6")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d9d1457e-49c5-4c91-b74f-6ddd462c635d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("420f29c1-f1e9-49bd-92a8-66b925e23e7c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ae011cf0-6cdd-433d-a0cc-d2b50cb3339a")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "0f55262d-e33a-11df-9694-0027103ea5f4");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

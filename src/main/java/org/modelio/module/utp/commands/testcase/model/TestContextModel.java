@@ -2,7 +2,6 @@ package org.modelio.module.utp.commands.testcase.model;
 
 import java.util.Collection;
 import java.util.Iterator;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.IUmlModel;
 import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
@@ -25,24 +24,18 @@ import org.modelio.module.utp.api.IUTPPeerModule;
 import org.modelio.module.utp.api.UTPStereotypes;
 import org.modelio.module.utp.impl.UTPModule;
 
-@objid ("d62bcb59-455a-4f61-89d7-a07d5c659f94")
 public class TestContextModel {
-    @objid ("b36afc45-3d0d-4501-aab6-d8f120a6b674")
     private static Enumeration _verdict = null;
 
-    @objid ("e8eaa93d-32b0-4fa4-b9af-dd677951bc92")
     private Classifier _element;
 
-    @objid ("1ad6f635-a19d-408e-ad0f-c7e4fe413572")
     private IModelingSession _session;
 
-    @objid ("012e6532-50aa-4636-a9e7-451cb523940f")
     public TestContextModel(Classifier element, IModelingSession session) {
         this._element = element;
         this._session = session;
     }
 
-    @objid ("0b935b0b-d198-4f59-aa69-2e7a9d18444a")
     public Operation createTestCase(String name) {
         Operation op = this._session.getModel().createOperation(name, this._element);
         if(_verdict == null){//caching
@@ -56,7 +49,6 @@ public class TestContextModel {
         return op;
     }
 
-    @objid ("0e0fb2da-d73e-4267-855c-5fdd11ac53f1")
     public Note createTestObjective(Operation testcase, String objectiveDescription) {
         Note note = this._session.getModel().createNote();
         note.setContent(objectiveDescription);
@@ -70,7 +62,6 @@ public class TestContextModel {
         return note;
     }
 
-    @objid ("2253a200-c7c2-4c52-bd7d-c84072cbb359")
     public Interaction createInteraction(Operation operation) {
         IUmlModel umlModel = this._session.getModel();
         Interaction interaction = umlModel.createInteraction();    

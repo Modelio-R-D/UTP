@@ -9,7 +9,6 @@ package org.modelio.module.utp.api.utpprofile.standard.opaqueaction;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.api.module.context.IModuleContext;
@@ -31,15 +30,12 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * <p>Stereotype description:
  * <br/><i></i></p>
  */
-@objid ("0641014a-8084-489b-ae54-a60332b71336")
 public class TimerRunningAction {
-    @objid ("d0ccf38f-43b1-4eef-abfc-77cdb9e987fd")
     public static final String STEREOTYPE_NAME = "TimerRunningAction";
 
     /**
      * The underlying {@link OpaqueAction} represented by this proxy, never null.
      */
-    @objid ("66aa3fb3-6ae8-48db-8c4c-3682891dadc2")
     protected final OpaqueAction elt;
 
     /**
@@ -50,7 +46,6 @@ public class TimerRunningAction {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("8159cbe0-0cb3-4b2c-9b38-b9b1917d545e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof OpaqueAction) && ((OpaqueAction) elt).isStereotyped(IUTPPeerModule.MODULE_NAME, TimerRunningAction.STEREOTYPE_NAME));
     }
@@ -60,7 +55,6 @@ public class TimerRunningAction {
      * 
      * @return a {@link TimerRunningAction} proxy on the created {@link OpaqueAction}.
      */
-    @objid ("a398c99f-8cc7-4561-aeeb-839dedf3795a")
     public static TimerRunningAction create() {
         ModelElement e = (ModelElement)UTPModule.getInstance().getModuleContext().getModelingSession().getModel().createElement("Standard.OpaqueAction");
         e.addStereotype(IUTPPeerModule.MODULE_NAME, TimerRunningAction.STEREOTYPE_NAME);
@@ -74,7 +68,6 @@ public class TimerRunningAction {
      * @param obj a OpaqueAction
      * @return a {@link TimerRunningAction} proxy or <i>null</i>.
      */
-    @objid ("5bf5dac5-7032-4019-9b10-31237fb01dea")
     public static TimerRunningAction instantiate(final OpaqueAction obj) {
         return TimerRunningAction.canInstantiate(obj) ? new TimerRunningAction(obj) : null;
     }
@@ -87,7 +80,6 @@ public class TimerRunningAction {
      * @return a {@link TimerRunningAction} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("97b682ea-2114-46c9-abc5-7ea3ea2f6f35")
     public static TimerRunningAction safeInstantiate(final OpaqueAction obj) throws IllegalArgumentException {
         if (TimerRunningAction.canInstantiate(obj))
         	return new TimerRunningAction(obj);
@@ -95,7 +87,6 @@ public class TimerRunningAction {
         	throw new IllegalArgumentException("TimerRunningAction: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("efb74a8e-634e-42fe-9f38-3e6cc4ec4404")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,34 +106,26 @@ public class TimerRunningAction {
      * Get the underlying {@link OpaqueAction}. 
      * @return the OpaqueAction represented by this proxy, never null.
      */
-    @objid ("6a6174aa-0e66-46f3-894b-5af762a31fed")
     public OpaqueAction getElement() {
         return this.elt;
     }
 
-    @objid ("7c644e1d-2960-4656-91f9-d2d51f6c7797")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("553af51a-4403-4f58-88ea-bf9df03d1a06")
     protected TimerRunningAction(final OpaqueAction elt) {
         this.elt = elt;
     }
 
-    @objid ("bb8b4662-7ede-465b-81cc-5665d84f90b5")
     public static final class MdaTypes {
-        @objid ("1eed224b-f833-4291-9046-e2e3c4b87d73")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("11db8bc7-1ae9-4379-a708-4a61db2ffbc3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("83baa142-eb4f-40b7-a59d-30a790924884")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("65a4c6a9-122c-4cf4-81c9-edf1f5783ac5")
         public static void init(final IModuleContext ctx) {
             STEREOTYPE_ELT = ctx.getModelingSession().findElementById(Stereotype.class, "41d5d72e-e33a-11df-9694-0027103ea5f4");
             MDAASSOCDEP = ctx.getModelingSession().findElementById(Stereotype.class, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e");

@@ -168,7 +168,7 @@
         <Commands>
             <Command id="Test_Case" label="%command.Test_Case.label" tooltip="%command.Test_Case.tooltip" image="res/icon/gui/testcase.png" modify-model="true">
                 <Scope metaclass="Standard.Classifier" stereotype="UTP#TestContext"/>
-                <Handler class="org.modelio.module.utp.commands.AddTestCase"/>
+                <Handler class="org.modelio.module.utp.commands.CreateTestCase"/>
             </Command>
             <Command id="SUT" label="%command.SUT.label" tooltip="%command.SUT.tooltip" image="res/icon/gui/sut.png" modify-model="true">
                 <Scope metaclass="Standard.BindableInstance" stereotype=""/>
